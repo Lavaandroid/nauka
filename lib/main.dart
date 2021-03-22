@@ -30,31 +30,43 @@ class _AplikacjaState extends State<Aplikacja>{   //state to generic class z mat
 
   var _indekspytan=0;
 
+  final pytania= const [         //[] zawiera liste, w tym przypadku pytan, const- ostetczna wartosci nigdy sie nie zmini, compiletime igdy sie nie zmieni const
+
+    {'tekstPytan': 'Jaki jest Twoj ulubiony kolor', //nie jest lista, ale kolekcja kluczy wartosci, pierwsza czesc to klucz, druga wartosc
+      'odpowiedzi': ['Czarny', 'Czerwony', 'Zielony', 'Bialy']}
+    ,
+    {'tekstPytan': 'Jakie jest Twoje ulubione zwierzątko',
+      'odpowiedzi': ['Pies', 'Kot', 'Zebra', 'Królik']
+    }
+    ,
+    {'tekstPytan': 'W jakim jezyku jest ta aplikacja',
+      'odpowiedzi': ['Java', 'c++', 'Kotlin', 'Dart']
+    }
+
+  ];
+
   void _odpowiedzi(){
+
+
+
     setState(() {        //musimy powiedziec aplikacji zeby wyrenderowala jeszcze raz napis, bo samo sie nie zrobi, gdyz musialaby renderowac z kazdym nacisnieciem, a to by bardzo zle wplynelo na wydajnosc
 
       _indekspytan = _indekspytan + 1;
     });
     print(_indekspytan);
     // print('Wybrana odpowiedz');
+
+    if (_indekspytan<pytania.length) {
+
+      print('Mamy więcej pytań');
+
+    }
+
   }
   @override //nie jest wymagane, jest dekoratorem, ktory rowniez pochodzi z material.dart. Zaznacza ze overridujemy build method
   Widget build(BuildContext context){ // build context jest zawarty w material design, context specjalny objekt ktory flutter bedzie wywolywany przez fluttera
     //chce wybudowac widget
-    var pytania=[         //[] zawiera liste, w tym przypadku pytan
 
-      {'tekstPytan': 'Jaki jest Twoj ulubiony kolor', //nie jest lista, ale kolekcja kluczy wartosci, pierwsza czesc to klucz, druga wartosc
-        'odpowiedzi': ['Czarny', 'Czerwony', 'Zielony', 'Bialy']}
-      ,
-      {'tekstPytan': 'Jakie jest Twoje ulubione zwierzątko',
-        'odpowiedzi': ['Pies', 'Kot', 'Zebra', 'Królik']
-      }
-      ,
-      {'tekstPytan': 'W jakim jezyku jest ta aplikacja',
-        'odpowiedzi': ['Java', 'c++', 'Kotlin', 'Dart']
-      }
-
-    ];
     return MaterialApp(
       home: Scaffold(      //zawiera podstawowy setup, zeby zmienic moje widgety na apliakcje
           appBar: AppBar(     //belka na gorze, dostosowuje sie do wielkosci ekranu
