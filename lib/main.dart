@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart'; //daje wyglad material design
+import 'package:nauka/wynik.dart';
 
 
-import './pytania.dart';
-import './przyciski.dart';
+import 'quiz.dart';
+import 'wynik.dart';
 
 
 void main() {
@@ -29,25 +30,52 @@ class _AplikacjaState extends State<Aplikacja>{   //state to generic class z mat
 
 
   var _indekspytan=0;
+  var _liczbapunktow=0;
 
-  final pytania= const [         //[] zawiera liste, w tym przypadku pytan, const- ostetczna wartosci nigdy sie nie zmini, compiletime igdy sie nie zmieni const
+  void _resetQuiz() {
+    setState(() {
+      _indekspytan=0;
+      _liczbapunktow=0;
+    });
 
-    {'tekstPytan': 'Jaki jest Twoj ulubiony kolor', //nie jest lista, ale kolekcja kluczy wartosci, pierwsza czesc to klucz, druga wartosc
-      'odpowiedzi': ['Czarny', 'Czerwony', 'Zielony', 'Bialy']}
-    ,
+
+  }
+
+  final _pytania= const [         //[] zawiera liste, w tym przypadku pytan, const- ostetczna wartosci nigdy sie nie zmini, compiletime igdy sie nie zmieni const
+
+  {
+    'tekstPytan': 'Jaki jest Twoj ulubiony kolor',
+    //nie jest lista, ale kolekcja kluczy wartosci, pierwsza czesc to klucz, druga wartosc
+    'odpowiedzi': [
+      {'treść': 'Czarny', 'punkty': 10},
+      {'treść': 'Czerwony', 'punkty': 5},
+      {'treść': 'Zielony', 'punkty': 2},
+      {'treść': 'Bialy', 'punkty': 1},
+    ],
+  },
     {'tekstPytan': 'Jakie jest Twoje ulubione zwierzątko',
-      'odpowiedzi': ['Pies', 'Kot', 'Zebra', 'Królik']
-    }
-    ,
-    {'tekstPytan': 'W jakim jezyku jest ta aplikacja',
-      'odpowiedzi': ['Java', 'c++', 'Kotlin', 'Dart']
-    }
+      'odpowiedzi': [
+      {'treść': 'Pies', 'punkty' : 10},
+  {'treść': 'Kot', 'punkty': 2},
+      {'treść': 'Zebra', 'punkty' : 5},
+      {'treść': 'Królik', 'punkty' : 9},
+  ]
+    },
 
+    {'tekstPytan': 'W jakim jezyku jest ta aplikacja',
+
+      'odpowiedzi': [
+    {'treść' :'Java', 'punkty' : 0},
+    {'treść' : 'c++', 'punkty' : 0},
+    {'treść' : 'Kotlin', 'punkty' : 0},
+    {'treść' : 'Dart', 'punkty' :10}
+    ]
+    }
   ];
 
-  void _odpowiedzi(){
+  void _odpowiedzi(int punkty){
 
-
+_liczbapunktow= _liczbapunktow+punkty;
 
     setState(() {        //musimy powiedziec aplikacji zeby wyrenderowala jeszcze raz napis, bo samo sie nie zrobi, gdyz musialaby renderowac z kazdym nacisnieciem, a to by bardzo zle wplynelo na wydajnosc
 
@@ -56,11 +84,12 @@ class _AplikacjaState extends State<Aplikacja>{   //state to generic class z mat
     print(_indekspytan);
     // print('Wybrana odpowiedz');
 
-    if (_indekspytan<pytania.length) {
+    if (_indekspytan<_pytania.length) {
 
       print('Mamy więcej pytań');
 
-    }
+    } else
+      print('Nie ma więcej pytań');
 
   }
   @override //nie jest wymagane, jest dekoratorem, ktory rowniez pochodzi z material.dart. Zaznacza ze overridujemy build method
@@ -73,33 +102,13 @@ class _AplikacjaState extends State<Aplikacja>{   //state to generic class z mat
             title: Text('Moja pierwsza aplikacja'),
             backgroundColor: Colors.yellow,
           ),
-          body:
+          body:  _indekspytan<_pytania.length
+              ? Quiz(odpowiedzi: _odpowiedzi, indekspytan: _indekspytan, pytania: _pytania,)
 
-          Column(     //zawiera liste widgetow, bo inaczej nie mozna umiescic kilku jesli chce, zeby byly w rzedzie to uzywam row
-            children: [
-
-              Pytanie(
-                pytania[_indekspytan]['tekstPytan']?.toString()??'', //pytania.elementAt(0), //wyswietli pierwsze pytanie z listy
-              ),
-
-
-              // ElevatedButton  ( child: Text('Odpowiedź 1'),  onPressed: _odpowiedzi, style: ElevatedButton.styleFrom(primary: Colors.red, onPrimary: Colors.black)  ),  //tworze przycisk, nastepnie onpressed zawiera funkcje ktora program uruchomi po nacisnieciu
-              //ElevatedButton(child: Text('Odpowiedź 2'),  onPressed: _odpowiedzi, style: ElevatedButton.styleFrom(primary: Colors.orange, textStyle: TextStyle(fontSize: 10, fontStyle: FontStyle.italic)),),
-              //Odpowiedz(_odpowiedzi),
-
-              ...(pytania[_indekspytan]['odpowiedzi'] as List<String> ).map((odpowiedz)   { //kropki zapobiegaja tworzeniu 2 listy, podmienia wartosci
-
-                return Odpowiedz(_odpowiedzi,  odpowiedz);
-
-              }).toList()
-
-
-            ],
-
-          ) ,
-
-          backgroundColor: Colors.blue
-      ),);
+     : Wynik(_liczbapunktow, _resetQuiz),
+        backgroundColor: Colors.blue,
+      ),
+    );
     //scaffold pochodzi z material dart, jego zadaniem jest tworzenie podstawowej struktury kolorow, theme itp. strony
   }
 }

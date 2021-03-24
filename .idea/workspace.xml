@@ -19,13 +19,35 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0196850-6d77-4b7d-88f0-ac6e873aae01" name="Default Changelist" comment="Initial commit" />
+    <list default="true" id="e0196850-6d77-4b7d-88f0-ac6e873aae01" name="Default Changelist" comment="update 2">
+      <change afterPath="$PROJECT_DIR$/lib/quiz.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/wynik.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4a1547644c805218862a5ff0c03140b7/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4a1547644c805218862a5ff0c03140b7/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4a1547644c805218862a5ff0c03140b7/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4a1547644c805218862a5ff0c03140b7/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[MUN0218930009819]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -82,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616439856334</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update 2">
+      <created>1616440039927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616440039927</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,7 +128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="update 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615143224090">
@@ -123,31 +153,35 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="586" y="235" width="738" height="644" key="Github.UntrackedFilesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1616161510312" />
-    <state width="904" height="172" key="GridCell.Tab.0.bottom" timestamp="1616439793113">
+    <state width="914" height="170" key="GridCell.Tab.0.bottom" timestamp="1616603636950">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="904" height="172" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1616439793113" />
+    <state width="914" height="170" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1616603636950" />
     <state width="878" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1615070021121" />
-    <state width="904" height="172" key="GridCell.Tab.0.center" timestamp="1616439793112">
+    <state width="914" height="170" key="GridCell.Tab.0.center" timestamp="1616603636950">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="904" height="172" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1616439793112" />
+    <state width="914" height="170" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1616603636950" />
     <state width="878" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1615070021120" />
-    <state width="904" height="172" key="GridCell.Tab.0.left" timestamp="1616439793112">
+    <state width="914" height="170" key="GridCell.Tab.0.left" timestamp="1616603636949">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="904" height="172" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1616439793112" />
+    <state width="914" height="170" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1616603636949" />
     <state width="878" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1615070021118" />
-    <state width="904" height="172" key="GridCell.Tab.0.right" timestamp="1616439793113">
+    <state width="914" height="170" key="GridCell.Tab.0.right" timestamp="1616603636950">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="904" height="172" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1616439793113" />
+    <state width="914" height="170" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1616603636950" />
     <state width="878" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1615070021120" />
     <state x="379" y="27" width="1022" height="737" key="SettingsEditor" timestamp="1616161433766">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="379" y="27" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1616161433766" />
     <state x="437" y="27" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1615069986063" />
+    <state x="1030" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1616440470206">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1030" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1616440470206" />
     <state x="1214" y="468" width="442" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616439678529">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
